@@ -29,64 +29,7 @@ const HomePage: React.FC = () => {
     });
   };
 
-  const FeaturedArticleCard: React.FC<{ article: any }> = ({ article }) => (
-    <Card
-      sx={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      <CardMedia
-        component="img"
-        height="240"
-        image={article.imageUrl}
-        alt={article.title}
-        sx={{ objectFit: 'cover' }}
-      />
-      <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-        <Box sx={{ mb: 2 }}>
-          <Chip
-            label={article.category.charAt(0).toUpperCase() + article.category.slice(1)}
-            size="small"
-            sx={{
-              backgroundColor: 'primary.main',
-              color: 'white',
-              mb: 1,
-            }}
-          />
-          <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 600 }}>
-            {article.title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-            {article.summary}
-          </Typography>
-        </Box>
-        <Box sx={{ mt: 'auto' }}>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-            <Typography variant="caption" color="text.secondary">
-              By {article.author} • {formatDate(article.publishedAt)}
-            </Typography>
-            <Typography variant="caption" color="text.secondary">
-              {article.readTime} min read
-            </Typography>
-          </Box>
-          <Button
-            component={Link}
-            to={`/article/${article.id}`}
-            variant="contained"
-            color="primary"
-            endIcon={<ArrowForward />}
-            fullWidth
-          >
-            Read More
-          </Button>
-        </Box>
-      </CardContent>
-    </Card>
-  );
+
 
   const ArticleCard: React.FC<{ article: any }> = ({ article }) => (
     <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
