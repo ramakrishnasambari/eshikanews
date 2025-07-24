@@ -11,10 +11,10 @@
 Before deploying, update the `homepage` field in `package.json`:
 
 ```json
-"homepage": "https://YOUR_GITHUB_USERNAME.github.io/eshikanews"
+"homepage": "https://eshikanews.in"
 ```
 
-Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.
+**Note:** This project is configured for the custom domain `eshikanews.in`.
 
 ### Step 2: Initialize Git Repository (if not already done)
 ```bash
@@ -58,7 +58,7 @@ This command will:
 ### Step 7: Access Your Website
 Your website will be available at:
 ```
-https://YOUR_GITHUB_USERNAME.github.io/eshikanews
+https://eshikanews.in
 ```
 
 ### Troubleshooting
