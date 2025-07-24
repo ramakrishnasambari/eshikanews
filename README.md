@@ -1,46 +1,199 @@
-# Getting Started with Create React App
+# Eshika News - Modern News Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive news website built with React.js and Material-UI, featuring elegant UI components and sample news articles.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Modern Design**: Clean, elegant UI with Material-UI components
+- **Responsive Layout**: Fully responsive design that works on all devices
+- **Category Navigation**: Browse news by categories (Technology, Business, Politics, Sports, Entertainment)
+- **Search Functionality**: Search articles by title, content, or author
+- **Article Details**: Full article view with related articles
+- **Social Sharing**: Share articles on social media platforms
+- **Newsletter Signup**: Email subscription feature in the footer
+- **Sample Content**: 8 detailed sample news articles across different categories
 
-### `npm start`
+## 🎨 Design Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Color Scheme**: Primary color #d63384 (pink) with blue accents
+- **Typography**: Clean, readable fonts with proper hierarchy
+- **Animations**: Smooth hover effects and transitions
+- **Cards**: Elegant card-based layout for articles
+- **Navigation**: Sticky header with search and mobile menu
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📱 Pages
 
-### `npm test`
+1. **Homepage**: Featured articles, latest news, and category sections
+2. **Article Page**: Full article view with metadata and related articles
+3. **Category Page**: Articles filtered by category with search and sorting
+4. **Header**: Navigation with search functionality
+5. **Footer**: Newsletter signup, links, and social media
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technology Stack
 
-### `npm run build`
+- **React 18** with TypeScript
+- **Material-UI (MUI)** for UI components
+- **React Router** for navigation
+- **CSS-in-JS** with MUI's sx prop
+- **Responsive Design** with MUI's breakpoint system
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd eshikanews
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Start the development server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗️ Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Header.tsx      # Navigation header
+│   └── Footer.tsx      # Site footer
+├── pages/              # Page components
+│   ├── HomePage.tsx    # Homepage
+│   ├── ArticlePage.tsx # Individual article view
+│   └── CategoryPage.tsx # Category listing
+├── data/               # Sample data
+│   └── newsData.ts     # News articles and categories
+├── App.tsx             # Main app component
+└── index.tsx           # App entry point
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 📄 Sample Articles
 
-## Learn More
+The website includes 8 sample articles across different categories:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Technology**: AI healthcare breakthrough, Quantum computing
+- **Business**: Market rally, Economic policy changes
+- **Politics**: Climate agreement
+- **Sports**: Underdog team story, International tournament
+- **Entertainment**: Blockbuster movie success
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Each article includes:
+- High-quality images from Unsplash
+- Detailed content with proper formatting
+- Author information and read time
+- Tags and categories
+- Publication dates
+
+## 🎯 Key Features
+
+### Homepage
+- Hero section with welcome message
+- Featured articles section
+- Latest news grid
+- Category browsing sections
+
+### Article Page
+- Full article content
+- Author and publication info
+- Social sharing buttons
+- Related articles
+- Breadcrumb navigation
+
+### Category Page
+- Filtered article listings
+- Search within category
+- Sort by date or read time
+- Responsive grid layout
+
+### Header
+- Logo and brand name
+- Category navigation
+- Search functionality
+- Mobile-responsive menu
+
+### Footer
+- Newsletter subscription
+- Category links
+- Company information
+- Social media links
+
+## 🚀 Deployment
+
+To build the project for production:
+
+```bash
+npm run build
+```
+
+The build files will be created in the `build` folder, ready for deployment to any static hosting service.
+
+## 🎨 Customization
+
+### Colors
+The primary color scheme can be modified in `src/App.tsx`:
+- Primary: #d63384 (pink)
+- Secondary: #1976d2 (blue)
+
+### Content
+Add or modify articles in `src/data/newsData.ts`:
+- Add new articles to the `newsArticles` array
+- Modify categories in the `categories` array
+- Update helper functions as needed
+
+### Styling
+- Global styles in `src/index.css`
+- Component-specific styles using MUI's `sx` prop
+- Theme customization in `src/App.tsx`
+
+## 📱 Responsive Design
+
+The website is fully responsive with breakpoints:
+- **Mobile**: < 600px
+- **Tablet**: 600px - 960px
+- **Desktop**: > 960px
+
+## 🔧 Development
+
+### Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (not recommended)
+
+### Code Style
+
+- TypeScript for type safety
+- Functional components with hooks
+- Material-UI components and styling
+- Consistent naming conventions
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- **Material-UI** for the excellent component library
+- **Unsplash** for high-quality images
+- **React** team for the amazing framework
+- **Create React App** for the project setup
+
+---
+
+Built with ❤️ using React and Material-UI
