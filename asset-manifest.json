@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eshikanews/static/css/main.07933220.css",
+    "main.js": "/eshikanews/static/js/main.28c85f9a.js",
+    "index.html": "/eshikanews/index.html",
+    "main.07933220.css.map": "/eshikanews/static/css/main.07933220.css.map",
+    "main.28c85f9a.js.map": "/eshikanews/static/js/main.28c85f9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07933220.css",
+    "static/js/main.28c85f9a.js"
+  ]
+}
