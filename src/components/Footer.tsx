@@ -49,15 +49,15 @@ const Footer: React.FC = () => {
             <Box sx={{ color: 'grey.300' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <Email sx={{ mr: 1, fontSize: 'small' }} />
-                <Typography variant="body2">info@eshikanews.com</Typography>
+                <Typography variant="body2">eshikatrainingplacements@gmail.com</Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <Phone sx={{ mr: 1, fontSize: 'small' }} />
-                <Typography variant="body2">+1 (555) 123-4567</Typography>
+                <Typography variant="body2">+91 9381698652</Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <LocationOn sx={{ mr: 1, fontSize: 'small' }} />
-                <Typography variant="body2">New York, NY 10001</Typography>
+                <Typography variant="body2">Jannaram, Mancheriyal, 504205</Typography>
               </Box>
             </Box>
           </Box>
