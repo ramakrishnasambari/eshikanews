@@ -2,11 +2,7 @@ import React from 'react';
 import {
   Box,
   Container,
-  Grid,
   Typography,
-  Link,
-  TextField,
-  Button,
   IconButton,
   Divider,
 } from '@mui/material';
@@ -23,38 +19,7 @@ import {
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
-    {
-      title: 'Categories',
-      links: [
-        { label: 'Technology', href: '/category/technology' },
-        { label: 'Business', href: '/category/business' },
-        { label: 'Politics', href: '/category/politics' },
-        { label: 'Sports', href: '/category/sports' },
-        { label: 'Entertainment', href: '/category/entertainment' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Contact', href: '/contact' },
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms of Service', href: '/terms' },
-        { label: 'Careers', href: '/careers' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { label: 'Help Center', href: '/help' },
-        { label: 'Advertise', href: '/advertise' },
-        { label: 'Submit News', href: '/submit' },
-        { label: 'Feedback', href: '/feedback' },
-        { label: 'Report Issue', href: '/report' },
-      ],
-    },
-  ];
+
 
   const socialLinks = [
     { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
@@ -75,78 +40,9 @@ const Footer: React.FC = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
-          {/* Newsletter Signup */}
-          <Box sx={{ flex: '1 1 300px', minWidth: 0 }}>
-            <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-              Eshika News
-            </Typography>
-            <Typography variant="body2" sx={{ mb: 3, color: 'grey.300' }}>
-              Stay updated with the latest news and insights. Subscribe to our newsletter for daily updates delivered to your inbox.
-            </Typography>
-            <Box component="form" sx={{ display: 'flex', gap: 1 }}>
-              <TextField
-                size="small"
-                placeholder="Enter your email"
-                sx={{
-                  flex: 1,
-                  '& .MuiOutlinedInput-root': {
-                    color: 'white',
-                    '& fieldset': {
-                      borderColor: 'grey.600',
-                    },
-                    '&:hover fieldset': {
-                      borderColor: 'primary.main',
-                    },
-                    '&.Mui-focused fieldset': {
-                      borderColor: 'primary.main',
-                    },
-                  },
-                  '& .MuiInputBase-input::placeholder': {
-                    color: 'grey.400',
-                    opacity: 1,
-                  },
-                }}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ px: 3 }}
-              >
-                Subscribe
-              </Button>
-            </Box>
-          </Box>
-
-          {/* Footer Links */}
-          {footerSections.map((section) => (
-            <Box sx={{ flex: '1 1 200px', minWidth: 0 }} key={section.title}>
-              <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-                {section.title}
-              </Typography>
-              <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
-                {section.links.map((link) => (
-                  <Box component="li" key={link.label} sx={{ mb: 1 }}>
-                    <Link
-                      href={link.href}
-                      sx={{
-                        color: 'grey.300',
-                        textDecoration: 'none',
-                        '&:hover': {
-                          color: 'primary.main',
-                        },
-                      }}
-                    >
-                      {link.label}
-                    </Link>
-                  </Box>
-                ))}
-              </Box>
-            </Box>
-          ))}
-
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 4, justifyContent: 'center' }}>
           {/* Contact Information */}
-          <Box sx={{ flex: '1 1 200px', minWidth: 0 }}>
+          <Box sx={{ flex: '1 1 300px', minWidth: 0, maxWidth: 400 }}>
             <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
               Contact
             </Typography>

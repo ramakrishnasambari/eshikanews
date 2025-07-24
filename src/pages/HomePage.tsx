@@ -8,14 +8,11 @@ import {
   CardMedia,
   Chip,
   Button,
-  Divider,
 } from '@mui/material';
 import { ArrowForward } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import {
   newsArticles,
-  categories,
-  getArticlesByCategory,
 } from '../data/newsData';
 
 const HomePage: React.FC = () => {
@@ -101,71 +98,7 @@ const HomePage: React.FC = () => {
         </Box>
       </Box>
 
-      <Divider sx={{ my: 6 }} />
 
-      {/* Category Sections */}
-      <Box>
-        <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 600, mb: 4 }}>
-          Browse by Category
-        </Typography>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
-          {categories.map((category) => {
-            const categoryArticles = getArticlesByCategory(category.name).slice(0, 3);
-            return (
-              <Box sx={{ flex: '1 1 400px', minWidth: 0 }} key={category.name}>
-                <Box sx={{ mb: 3 }}>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontWeight: 600 }}>
-                    {category.label}
-                  </Typography>
-                  <Divider sx={{ mb: 2 }} />
-                </Box>
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                  {categoryArticles.map((article) => (
-                    <Box key={article.id}>
-                      <Card sx={{ display: 'flex', height: 120 }}>
-                        <CardMedia
-                          component="img"
-                          sx={{ width: 120, objectFit: 'cover' }}
-                          image={article.imageUrl}
-                          alt={article.title}
-                        />
-                        <CardContent sx={{ flex: 1, p: 2 }}>
-                          <Typography variant="subtitle2" component="h4" gutterBottom sx={{ fontWeight: 600 }}>
-                            {article.title}
-                          </Typography>
-                          <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1 }}>
-                            {formatDate(article.publishedAt)}
-                          </Typography>
-                          <Button
-                            component={Link}
-                            to={`/article/${article.id}`}
-                            size="small"
-                            color="primary"
-                            sx={{ p: 0, minWidth: 'auto' }}
-                          >
-                            Read More →
-                          </Button>
-                        </CardContent>
-                      </Card>
-                    </Box>
-                  ))}
-                </Box>
-                <Box sx={{ mt: 2 }}>
-                  <Button
-                    component={Link}
-                    to={`/category/${category.name}`}
-                    variant="outlined"
-                    color="primary"
-                    fullWidth
-                  >
-                    View All {category.label} News
-                  </Button>
-                </Box>
-              </Box>
-            );
-          })}
-        </Box>
-      </Box>
     </Container>
   );
 };
