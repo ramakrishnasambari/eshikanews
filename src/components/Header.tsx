@@ -54,9 +54,22 @@ const Header: React.FC = () => {
   const drawer = (
     <Box sx={{ width: 250 }}>
       <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider' }}>
-        <Typography variant="h6" color="primary">
-          Eshika News
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box
+            component="img"
+            src="/logo.jpeg"
+            alt="Eshika News Logo"
+            sx={{
+              height: 30,
+              width: 'auto',
+              mr: 1,
+              borderRadius: 1,
+            }}
+          />
+          <Typography variant="h6" color="primary">
+            Eshika News
+          </Typography>
+        </Box>
       </Box>
       <List>
         {navigationItems.map((item) => (
@@ -100,7 +113,17 @@ const Header: React.FC = () => {
                   color: 'inherit',
                 }}
               >
-                <NewspaperIcon sx={{ mr: 1, color: 'primary.main' }} />
+                <Box
+                  component="img"
+                  src="/logo.jpeg"
+                  alt="Eshika News Logo"
+                  sx={{
+                    height: 40,
+                    width: 'auto',
+                    mr: 1,
+                    borderRadius: 1,
+                  }}
+                />
                 <Typography
                   variant="h5"
                   component="div"
