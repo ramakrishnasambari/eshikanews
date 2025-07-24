@@ -10,17 +10,15 @@ import {
   Button,
   Divider,
 } from '@mui/material';
-import { ArrowForward, TrendingUp } from '@mui/icons-material';
+import { ArrowForward } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import {
   newsArticles,
   categories,
-  getFeaturedArticles,
   getArticlesByCategory,
 } from '../data/newsData';
 
 const HomePage: React.FC = () => {
-  const featuredArticles = getFeaturedArticles();
   const latestArticles = newsArticles.slice(0, 6);
 
   const formatDate = (dateString: string) => {
@@ -146,35 +144,6 @@ const HomePage: React.FC = () => {
 
   return (
     <Container maxWidth="xl" sx={{ py: 4 }}>
-      {/* Hero Section */}
-      <Box sx={{ mb: 6 }}>
-        <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 700, mb: 2 }}>
-          Welcome to Eshika News
-        </Typography>
-        <Typography variant="h6" color="text.secondary" sx={{ mb: 4, maxWidth: 600 }}>
-          Stay informed with the latest breaking news, in-depth analysis, and compelling stories from around the world.
-        </Typography>
-      </Box>
-
-      {/* Featured Articles */}
-      <Box sx={{ mb: 6 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-          <TrendingUp sx={{ mr: 1, color: 'primary.main' }} />
-          <Typography variant="h4" component="h2" sx={{ fontWeight: 600 }}>
-            Featured Stories
-          </Typography>
-        </Box>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
-          {featuredArticles.map((article) => (
-            <Box sx={{ flex: '1 1 350px', minWidth: 0 }} key={article.id}>
-              <FeaturedArticleCard article={article} />
-            </Box>
-          ))}
-        </Box>
-      </Box>
-
-      <Divider sx={{ my: 6 }} />
-
       {/* Latest News */}
       <Box sx={{ mb: 6 }}>
         <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 600, mb: 3 }}>
