@@ -16,7 +16,10 @@ import {
 } from '../data/newsData';
 
 const HomePage: React.FC = () => {
-  const latestArticles = newsArticles.slice(0, 6);
+  // Sort articles by publishedAt date (newest first) and get the latest 6
+  const latestArticles = newsArticles
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, 6);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -93,12 +96,10 @@ const HomePage: React.FC = () => {
           {latestArticles.map((article) => (
             <Box sx={{ flex: '1 1 350px', minWidth: 0 }} key={article.id}>
               <ArticleCard article={article} />
-            </Box>
+          </Box>
           ))}
         </Box>
       </Box>
-
-
     </Container>
   );
 };
